@@ -1,94 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuzhat Nuari Khan Rivu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuzhat Nuari Khan Rivu | Personal Website</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
       line-height: 1.6;
-      background-color: #f9f9f9;
+      background: #f5f7fb;
       color: #222;
     }
 
-    h1, h2 {
-      color: #111;
+    header {
+      background: #1f3c88;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
     }
 
-    .box {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      margin-bottom: 20px;
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
     }
 
-    a.button {
-      display: inline-block;
-      padding: 10px 16px;
-      margin-right: 10px;
-      background: #24292e;
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.05rem;
+    }
+
+    nav {
+      background: #163172;
+      text-align: center;
+      padding: 12px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
       color: white;
       text-decoration: none;
-      border-radius: 6px;
+      margin: 0 12px;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: white;
+      margin-bottom: 24px;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #1f3c88;
+      border-bottom: 2px solid #e8ecf5;
+      padding-bottom: 8px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
     }
 
     ul {
       padding-left: 20px;
     }
+
+    .btn {
+      display: inline-block;
+      background: #1f3c88;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #163172;
+    }
+
+    .item {
+      margin-bottom: 18px;
+    }
+
+    .item h3 {
+      margin: 0 0 4px 0;
+      font-size: 1.08rem;
+      color: #222;
+    }
+
+    .item p {
+      margin: 4px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      background: #1f3c88;
+      color: white;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="box">
+  <header>
     <h1>Nuzhat Nuari Khan Rivu</h1>
-    <p><strong>Student | Research Enthusiast | Programming Learner</strong></p>
-    <p>
-      Welcome to my personal GitHub page. I am interested in data science,
-      programming, research, and learning new technologies.
-    </p>
+    <p>PhD Student in Applied Mathematical and Computational Sciences</p>
+    <p>University of Iowa</p>
+    <a class="btn" href="mailto:nuzhatnuarikhan-rivu@uiowa.edu">Email Me</a>
+    <a class="btn" href="https://github.com/NuzhatNuari" target="_blank">GitHub</a>
+    <a class="btn" href="cv.pdf" target="_blank">Download CV</a>
+  </header>
 
-    <a class="button" href="https://github.com/NuzhatNuari" target="_blank">GitHub Profile</a>
-    <a class="button" href="cv.pdf" target="_blank">Download CV</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#awards">Awards</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section class="section" id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a PhD student in Applied Mathematical and Computational Sciences at the University of Iowa.
+        My academic background is in mathematics, and my interests include applied mathematics,
+        mathematical biology, data science, and bioinformatics.
+      </p>
+      <p>
+        I enjoy combining mathematical modeling, computation, and research to study real-world problems.
+      </p>
+    </section>
+
+    <section class="section" id="education">
+      <h2>Education</h2>
+
+      <div class="item">
+        <h3>PhD in Applied Mathematical and Computational Sciences</h3>
+        <p>Department of Mathematics, University of Iowa</p>
+        <p>Aug 2024 – Present</p>
+      </div>
+
+      <div class="item">
+        <h3>Master of Science in Mathematics</h3>
+        <p>Department of Mathematics, University of Dhaka</p>
+        <p>Apr 2023 – May 2024 | CGPA: 3.81/4.00</p>
+      </div>
+
+      <div class="item">
+        <h3>Bachelor of Science in Mathematics</h3>
+        <p>Department of Mathematics, University of Dhaka</p>
+        <p>Jan 2018 – Jan 2023 | CGPA: 3.60/4.00</p>
+      </div>
+
+      <div class="item">
+        <h3>Higher Secondary School Certificate (HSC)</h3>
+        <p>Viqarunnisa Noon School and College</p>
+        <p>2015 – 2017 | GPA: 5.00/5.00</p>
+      </div>
+
+      <div class="item">
+        <h3>Secondary School Certificate (SSC)</h3>
+        <p>Viqarunnisa Noon School and College</p>
+        <p>2013 – 2015 | GPA: 5.00/5.00</p>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Applied Mathematics</li>
+        <li>Mathematical Biology</li>
+        <li>Data Science</li>
+        <li>Bioinformatics</li>
+      </ul>
+    </section>
+
+    <section class="section" id="publications">
+      <h2>Publications</h2>
+      <div class="item">
+        <p>
+          <strong>Vaccine efficacy of COVID-19 in Bangladesh: Does vaccination prevent the pandemic?</strong><br>
+          Nuzhat Nuari Khan, Shahin Ara Begum, Raheedun Afeef, and Md Kamrujjaman.<br>
+          <em>GANIT: Journal of Bangladesh Mathematical Society</em>, 43(1), 2023.
+        </p>
+      </div>
+
+      <div class="item">
+        <p>
+          <strong>HIV/AIDS suppression in North America: Intervention plans and cost-effectiveness of UNAIDS 90-90-90 and 95-95-95 targets.</strong><br>
+          Nuzhat Nuari Khan Rivu, Md Kamrujjaman, and Asif Iqbal.<br>
+          <em>Communications in Nonlinear Science and Numerical Simulation</em>, 152 Part B, 2026.
+        </p>
+      </div>
+
+      <div class="item">
+        <p>
+          <strong>Comparative analysis of stochastic and predictable models in the HIV epidemic across genders.</strong><br>
+          Nuzhat Nuari Khan Rivu, Md Kamrujjaman, and Shohel Ahmed.<br>
+          <em>International Journal of Biomathematics</em>, Online Ready, 2025.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>Professional Experience</h2>
+
+      <div class="item">
+        <h3>Graduate Teaching Assistant</h3>
+        <p>University of Iowa</p>
+        <p>Aug 2024 – Present</p>
+      </div>
+
+      <div class="item">
+        <h3>Graduate Research Assistant, University Grant Commission (UGC)</h3>
+        <p>University of Dhaka</p>
+        <p>Apr 2023 – May 2024</p>
+      </div>
+
+      <div class="item">
+        <h3>Mathematics Instructor</h3>
+        <p>Udvash Academic and Admission Care</p>
+        <p>Jan 2019 – May 2024</p>
+      </div>
+    </section>
+
+    <section class="section" id="awards">
+      <h2>Honors and Awards</h2>
+      <ul>
+        <li>National Science and Technology (NST) Fellowship, 2023</li>
+        <li>Sumitomo Corporation Scholarship, 2020–2024</li>
+        <li>Women’s Mathematics Olympiad: 1st (2022), 2nd (2021), 8th (2020), 6th (2019)</li>
+        <li>EWU Interuniversity Math Olympiad, 4th position, 2019</li>
+        <li>Board Scholarship - Dhaka Board, Talentpool Scholarship, 2017</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Junior Certificate, Spanish Language (A1), Institute of Modern Language, University of Dhaka</li>
+        <li>What is Data Science? — IBM, Coursera</li>
+        <li>Data Science: Foundations Using R Specialization — IBM, Coursera</li>
+        <li>Python for Everybody Specialization — IBM, Coursera</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Affiliations</h2>
+      <ul>
+        <li>Organizing Volunteer, International Day of Mathematics (Mar 2023)</li>
+        <li>Organizing Secretary (Communication and Media), Dhaka University IT Society (Jan 2021 – Jan 2023)</li>
+        <li>Membership Coordinator, Viqarunnisa Noon Debating Club (Jul 2015 – Mar 2017)</li>
+      </ul>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="two-col">
+        <div>
+          <h3>Programming Languages and Software</h3>
+          <ul>
+            <li>MATLAB</li>
+            <li>Mathematica</li>
+            <li>Python</li>
+            <li>LaTeX</li>
+            <li>Fortran</li>
+            <li>MS Excel</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Teamwork</li>
+            <li>Presentation</li>
+            <li>Project and Event Management</li>
+            <li>Leadership</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>References</h2>
+      <div class="item">
+        <h3>Dr. Md. Kamrujjaman</h3>
+        <p>Professor, Department of Mathematics, University of Dhaka</p>
+        <p>Email: kamrujjaman@du.ac.bd</p>
+      </div>
+
+      <div class="item">
+        <h3>Dr. Laurent Jay</h3>
+        <p>Professor, Department of Mathematics, University of Iowa</p>
+        <p>Email: laurent-jay@uiowa.edu</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p><strong>Phone:</strong> +1 925 436 6145</p>
+      <p><strong>Email:</strong> nuzhatnuarikhan-rivu@uiowa.edu</p>
+      <p><strong>Location:</strong> Iowa City, IA, USA</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/NuzhatNuari" target="_blank">github.com/NuzhatNuari</a></p>
+    </section>
+
   </div>
 
-  <div class="box">
-    <h2>About Me</h2>
-    <p>
-      I am building my skills in programming, data analysis, and research.
-      This page will showcase my projects, experience, and academic work.
-    </p>
-  </div>
-
-  <div class="box">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>R</li>
-      <li>HTML/CSS basics</li>
-      <li>Data analysis</li>
-      <li>Research and documentation</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h2>Projects</h2>
-    <ul>
-      <li>Programming assignments and practice projects</li>
-      <li>Data science learning projects</li>
-      <li>Research-related coding work</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h2>Contact</h2>
-    <p>Email: your-email-here</p>
-    <p>GitHub: <a href="https://github.com/NuzhatNuari" target="_blank">github.com/NuzhatNuari</a></p>
-  </div>
+  <footer>
+    <p>&copy; 2026 Nuzhat Nuari Khan Rivu. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
