@@ -1,358 +1,1749 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuzhat Nuari Khan Rivu | Personal Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Academic website of Nuzhat Nuari Khan Rivu, PhD student in Applied Mathematical and Computational Sciences at the University of Iowa."
+  >
+
+  <title>Nuzhat Nuari Khan Rivu | Academic Website</title>
+
   <style>
+
+    /* =========================================================
+       COLOR PALETTE
+       Professional Rose / Dusty Pink Theme
+    ========================================================= */
+
+    :root {
+      --rose-dark: #5f2b42;
+      --rose-main: #8d4965;
+      --rose-medium: #ad6b83;
+      --rose-light: #ead5dd;
+      --rose-soft: #f8eff2;
+      --rose-pale: #fcf8fa;
+
+      --text-dark: #2f2529;
+      --text-medium: #65565d;
+      --text-light: #817078;
+
+      --white: #ffffff;
+      --border: #eadde2;
+
+      --shadow: 0 8px 28px rgba(95, 43, 66, 0.08);
+      --shadow-hover: 0 12px 34px rgba(95, 43, 66, 0.13);
+    }
+
+
+    /* =========================================================
+       GENERAL
+    ========================================================= */
+
     * {
       box-sizing: border-box;
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f5f7fb;
-      color: #222;
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
     }
 
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      line-height: 1.7;
+      background: var(--rose-pale);
+      color: var(--text-dark);
+    }
+
+    a {
+      color: var(--rose-main);
+    }
+
+    a:hover {
+      color: var(--rose-dark);
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+
+    /* =========================================================
+       HERO / HEADER
+    ========================================================= */
+
     header {
-      background: #1f3c88;
+      background:
+        linear-gradient(
+          135deg,
+          #55243b 0%,
+          #7e3c58 55%,
+          #a35f78 100%
+        );
+
       color: white;
-      padding: 50px 20px;
+      padding: 75px 20px 70px;
       text-align: center;
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 14px;
+
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 50px;
+
+      font-size: 0.82rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.4rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.15;
+      font-weight: 600;
     }
 
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.05rem;
+    header .subtitle {
+      margin: 16px 0 3px;
+      font-size: 1.2rem;
+      font-weight: 500;
     }
 
-    nav {
-      background: #163172;
-      text-align: center;
-      padding: 12px 10px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    header .institution {
+      margin: 0;
+      color: #f5e9ee;
+      font-size: 1rem;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-      font-size: 0.95rem;
+    .hero-description {
+      max-width: 680px;
+      margin: 22px auto 0;
+      color: #f8eef2;
+      font-size: 1rem;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .section {
-      background: white;
-      margin-bottom: 24px;
-      padding: 28px;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    }
-
-    .section h2 {
-      margin-top: 0;
-      color: #1f3c88;
-      border-bottom: 2px solid #e8ecf5;
-      padding-bottom: 8px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    ul {
-      padding-left: 20px;
+    .hero-buttons {
+      margin-top: 30px;
     }
 
     .btn {
       display: inline-block;
-      background: #1f3c88;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
+      padding: 11px 18px;
+      margin: 6px;
+
+      border-radius: 7px;
       text-decoration: none;
-      margin-right: 10px;
-      margin-top: 10px;
+      font-weight: 600;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
     }
 
-    .btn:hover {
-      background: #163172;
+    .btn-primary {
+      background: white;
+      color: var(--rose-dark);
     }
 
-    .item {
-      margin-bottom: 18px;
+    .btn-primary:hover {
+      background: #f9edf1;
+      color: var(--rose-dark);
+      transform: translateY(-2px);
     }
 
-    .item h3 {
-      margin: 0 0 4px 0;
-      font-size: 1.08rem;
-      color: #222;
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      color: white;
+      background: transparent;
     }
 
-    .item p {
-      margin: 4px 0;
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      transform: translateY(-2px);
     }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(8px);
+
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(95, 43, 66, 0.05);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      padding: 14px 18px;
+      gap: 5px;
+    }
+
+    nav a {
+      color: var(--text-dark);
+      text-decoration: none;
+
+      margin: 0 8px;
+      padding: 4px 3px;
+
+      font-size: 0.91rem;
+      font-weight: 600;
+
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--rose-main);
+    }
+
+
+    /* =========================================================
+       MAIN CONTENT
+    ========================================================= */
+
+    main {
+      padding: 42px 0 20px;
+    }
+
+    .section {
+      background: var(--white);
+
+      margin-bottom: 28px;
+      padding: 34px 38px;
+
+      border: 1px solid var(--border);
+      border-radius: 12px;
+
+      box-shadow: var(--shadow);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .section:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .section h2 {
+      position: relative;
+
+      margin: 0 0 25px;
+      padding-bottom: 11px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--rose-dark);
+      font-size: 1.65rem;
+      font-weight: 600;
+
+      border-bottom: 1px solid var(--rose-light);
+    }
+
+    .section h2::after {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      bottom: -1px;
+
+      width: 65px;
+      height: 3px;
+
+      border-radius: 3px;
+      background: var(--rose-main);
+    }
+
+    .section-intro {
+      color: var(--text-medium);
+      margin-top: -10px;
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-text {
+      font-size: 1.02rem;
+      color: var(--text-medium);
+    }
+
+    .about-text strong {
+      color: var(--text-dark);
+    }
+
+    .interest-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .interest {
+      padding: 12px 10px;
+      text-align: center;
+
+      background: var(--rose-soft);
+      color: var(--rose-dark);
+
+      border: 1px solid var(--rose-light);
+      border-radius: 7px;
+
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       EDUCATION AND EXPERIENCE ENTRIES
+    ========================================================= */
+
+    .entry {
+      padding: 3px 0 19px;
+      margin-bottom: 19px;
+
+      border-bottom: 1px solid #f1e8eb;
+    }
+
+    .entry:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .entry h3 {
+      margin: 0;
+      color: var(--text-dark);
+      font-size: 1.07rem;
+      font-weight: 650;
+    }
+
+    .date {
+      color: var(--rose-main);
+      font-size: 0.9rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .institution-name {
+      margin: 5px 0 0;
+      color: var(--text-medium);
+      font-style: italic;
+    }
+
+    .detail {
+      color: var(--text-light);
+      margin: 3px 0 0;
+      font-size: 0.92rem;
+    }
+
+
+    /* =========================================================
+       TEACHING
+    ========================================================= */
+
+    .teaching-position {
+      padding: 20px 22px;
+
+      background: var(--rose-soft);
+      border-left: 4px solid var(--rose-main);
+      border-radius: 8px;
+
+      margin-bottom: 22px;
+    }
+
+    .teaching-position .entry-header {
+      margin-bottom: 4px;
+    }
+
+    .course-list {
+      margin: 10px 0 0 0;
+    }
+
+    .course {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+
+      padding: 15px 0;
+      border-bottom: 1px solid #f0e4e8;
+    }
+
+    .course:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .course-code {
+      color: var(--rose-dark);
+      font-weight: 700;
+    }
+
+    .course-title {
+      font-weight: 600;
+    }
+
+    .course-type {
+      margin-top: 3px;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+
+    /* =========================================================
+       PUBLICATIONS
+    ========================================================= */
+
+    .publication-list {
+      padding-left: 28px;
+      margin-bottom: 0;
+    }
+
+    .publication-list li {
+      padding-left: 8px;
+      margin-bottom: 22px;
+    }
+
+    .publication-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .publication-title {
+      color: var(--text-dark);
+      font-weight: 650;
+    }
+
+    .publication-authors {
+      color: var(--text-medium);
+      margin-top: 3px;
+    }
+
+    .publication-journal {
+      color: var(--text-medium);
+      margin-top: 3px;
+    }
+
+    .pub-link {
+      display: inline-block;
+      margin-top: 5px;
+
+      color: var(--rose-main);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .pub-link:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================================================
+       AWARDS
+    ========================================================= */
+
+    .award {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+
+      padding: 14px 0;
+      border-bottom: 1px solid #f1e8eb;
+    }
+
+    .award:last-child {
+      border-bottom: none;
+    }
+
+    .award-name {
+      font-weight: 650;
+    }
+
+    .award-description {
+      margin-top: 3px;
+      color: var(--text-medium);
+      font-size: 0.93rem;
+    }
+
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 20px;
+
+      background: var(--rose-soft);
+      border: 1px solid var(--rose-light);
+      border-radius: 9px;
+    }
+
+    .skill-card h3 {
+      color: var(--rose-dark);
+      margin: 0 0 12px;
+      font-size: 1rem;
+    }
+
+    .tag {
+      display: inline-block;
+
+      padding: 6px 11px;
+      margin: 4px 3px;
+
+      background: white;
+      color: var(--text-dark);
+
+      border: 1px solid var(--rose-light);
+      border-radius: 20px;
+
+      font-size: 0.88rem;
+    }
+
+
+    /* =========================================================
+       CERTIFICATIONS
+    ========================================================= */
+
+    .compact-list {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .compact-list li {
+      margin-bottom: 11px;
+    }
+
+
+    /* =========================================================
+       REFERENCES
+    ========================================================= */
+
+    .reference-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .reference-card {
+      padding: 20px;
+
+      background: var(--rose-soft);
+      border: 1px solid var(--rose-light);
+      border-radius: 9px;
+    }
+
+    .reference-card h3 {
+      margin: 0 0 7px;
+      color: var(--rose-dark);
+    }
+
+    .reference-card p {
+      margin: 2px 0;
+      color: var(--text-medium);
+      font-size: 0.93rem;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .contact-card {
+      text-align: center;
+      padding: 20px 10px;
+
+      background: var(--rose-soft);
+      border: 1px solid var(--rose-light);
+      border-radius: 9px;
+    }
+
+    .contact-card strong {
+      display: block;
+      color: var(--rose-dark);
+      margin-bottom: 5px;
+    }
+
+    .contact-card a {
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
 
     footer {
+      margin-top: 45px;
+      padding: 30px 20px;
+
       text-align: center;
-      padding: 25px 15px;
-      background: #1f3c88;
-      color: white;
-      margin-top: 30px;
+
+      background: var(--rose-dark);
+      color: #f8edf1;
     }
 
-    @media (max-width: 768px) {
-      .two-col {
+    footer p {
+      margin: 0;
+      font-size: 0.88rem;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE DESIGN
+    ========================================================= */
+
+    @media (max-width: 850px) {
+
+      .interest-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .skills-grid,
+      .reference-grid {
         grid-template-columns: 1fr;
       }
 
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      header {
+        padding: 55px 18px;
+      }
+
       header h1 {
-        font-size: 2rem;
+        font-size: 2.35rem;
+      }
+
+      .nav-inner {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
       }
 
       nav a {
-        display: inline-block;
-        margin: 6px 8px;
+        white-space: nowrap;
       }
+
+      .container {
+        padding: 0 14px;
+      }
+
+      .section {
+        padding: 26px 21px;
+      }
+
+      .entry-header,
+      .award,
+      .course {
+        display: block;
+      }
+
+      .date {
+        display: block;
+        margin-top: 5px;
+      }
+
+      .course .date {
+        margin-top: 5px;
+      }
+
+      .interest-grid {
+        grid-template-columns: 1fr;
+      }
+
     }
+
   </style>
 </head>
+
+
 <body>
 
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
+
   <header>
-    <h1>Nuzhat Nuari Khan Rivu</h1>
-    <p>PhD Student in Applied Mathematical and Computational Sciences</p>
-    <p>University of Iowa</p>
-    <a class="btn" href="mailto:nuzhatnuarikhan-rivu@uiowa.edu">Email Me</a>
-    <a class="btn" href="https://github.com/NuzhatNuari" target="_blank">GitHub</a>
-    <a class="btn" href="cv.pdf" target="_blank">Download CV</a>
+
+    <div class="hero">
+
+      <div class="hero-label">
+        Mathematics · Research · Teaching
+      </div>
+
+      <h1>Nuzhat Nuari Khan Rivu</h1>
+
+      <p class="subtitle">
+        PhD Student in Applied Mathematical and Computational Sciences
+      </p>
+
+      <p class="institution">
+        Department of Mathematics · University of Iowa
+      </p>
+
+      <p class="hero-description">
+        Applied mathematician interested in mathematical biology,
+        computational modeling, data science, and bioinformatics,
+        with research and teaching experience spanning mathematical
+        modeling, epidemiology, and undergraduate mathematics education.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          class="btn btn-primary"
+          href="mailto:nuzhatnuarikhan-rivu@uiowa.edu">
+          Email
+        </a>
+
+        <a
+          class="btn btn-outline"
+          href="https://shorturl.at/rEQY4"
+          target="_blank"
+          rel="noopener noreferrer">
+          Google Scholar
+        </a>
+
+        <a
+          class="btn btn-outline"
+          href="https://www.linkedin.com/in/nuzhat-nuari-khan-rivu-0902491b1/"
+          target="_blank"
+          rel="noopener noreferrer">
+          LinkedIn
+        </a>
+
+        <a
+          class="btn btn-outline"
+          href="https://github.com/NuzhatNuari"
+          target="_blank"
+          rel="noopener noreferrer">
+          GitHub
+        </a>
+
+        <a
+          class="btn btn-outline"
+          href="cv.pdf"
+          target="_blank">
+          CV
+        </a>
+
+      </div>
+
+    </div>
+
   </header>
 
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
   <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#experience">Experience</a>
-    <a href="#awards">Awards</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+
+    <div class="nav-inner">
+
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#service">Service</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+
+    </div>
+
   </nav>
 
-  <div class="container">
 
-    <section class="section" id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a PhD student in Applied Mathematical and Computational Sciences at the University of Iowa.
-        My academic background is in mathematics, and my interests include applied mathematics,
-        mathematical biology, data science, and bioinformatics.
-      </p>
-      <p>
-        I enjoy combining mathematical modeling, computation, and research to study real-world problems.
-      </p>
-    </section>
+  <!-- =======================================================
+       MAIN
+  ======================================================== -->
 
-    <section class="section" id="education">
-      <h2>Education</h2>
+  <main>
 
-      <div class="item">
-        <h3>PhD in Applied Mathematical and Computational Sciences</h3>
-        <p>Department of Mathematics, University of Iowa</p>
-        <p>Aug 2024 – Present</p>
-      </div>
+    <div class="container">
 
-      <div class="item">
-        <h3>Master of Science in Mathematics</h3>
-        <p>Department of Mathematics, University of Dhaka</p>
-        <p>Apr 2023 – May 2024 </p>
-      </div>
 
-      <div class="item">
-        <h3>Bachelor of Science in Mathematics</h3>
-        <p>Department of Mathematics, University of Dhaka</p>
-        <p>Jan 2018 – Jan 2023 </p>
-      </div>
+      <!-- =====================================================
+           ABOUT
+      ====================================================== -->
 
-      <div class="item">
-        <h3>Higher Secondary School Certificate (HSC)</h3>
-        <p>Viqarunnisa Noon School and College</p>
-        <p>2015 – 2017 </p>
-      </div>
+      <section class="section" id="about">
 
-      <div class="item">
-        <h3>Secondary School Certificate (SSC)</h3>
-        <p>Viqarunnisa Noon School and College</p>
-        <p>2013 – 2015 </p>
-      </div>
-    </section>
+        <h2>About Me</h2>
 
-    <section class="section" id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Applied Mathematics</li>
-        <li>Mathematical Biology</li>
-        <li>Data Science</li>
-        <li>Bioinformatics</li>
-      </ul>
-    </section>
+        <div class="about-text">
 
-    <section class="section" id="publications">
-      <h2>Publications</h2>
-      <div class="item">
-        <p>
-          <strong>Vaccine efficacy of COVID-19 in Bangladesh: Does vaccination prevent the pandemic?</strong><br>
-          Nuzhat Nuari Khan, Shahin Ara Begum, Raheedun Afeef, and Md Kamrujjaman.<br>
-          <em>GANIT: Journal of Bangladesh Mathematical Society</em>, 43(1), 2023.
-        </p>
-      </div>
+          <p>
+            I am a PhD student in
+            <strong>Applied Mathematical and Computational Sciences</strong>
+            in the Department of Mathematics at the
+            <strong>University of Iowa</strong>.
+            My academic training is in mathematics, with research interests
+            centered on applied mathematics, mathematical biology,
+            computational modeling, data science, and bioinformatics.
+          </p>
 
-      <div class="item">
-        <p>
-          <strong>HIV/AIDS suppression in North America: Intervention plans and cost-effectiveness of UNAIDS 90-90-90 and 95-95-95 targets.</strong><br>
-          Nuzhat Nuari Khan Rivu, Md Kamrujjaman, and Asif Iqbal.<br>
-          <em>Communications in Nonlinear Science and Numerical Simulation</em>, 152 Part B, 2026.
-        </p>
-      </div>
+          <p>
+            My research interests include developing and analyzing mathematical
+            models for biological and epidemiological systems and using
+            computational and data-driven approaches to investigate
+            real-world problems.
+          </p>
 
-      <div class="item">
-        <p>
-          <strong>Comparative analysis of stochastic and predictable models in the HIV epidemic across genders.</strong><br>
-          Nuzhat Nuari Khan Rivu, Md Kamrujjaman, and Shohel Ahmed.<br>
-          <em>International Journal of Biomathematics</em>, Online Ready, 2025.
-        </p>
-      </div>
-    </section>
+          <p>
+            Alongside research, I have extensive experience teaching
+            undergraduate mathematics, including engineering calculus,
+            quantitative reasoning, college algebra, and basic algebra.
+          </p>
 
-    <section class="section" id="experience">
-      <h2>Professional Experience</h2>
-
-      <div class="item">
-        <h3>Graduate Teaching Assistant</h3>
-        <p>University of Iowa</p>
-        <p>Aug 2024 – Present</p>
-      </div>
-
-      <div class="item">
-        <h3>Graduate Research Assistant, University Grant Commission (UGC)</h3>
-        <p>University of Dhaka</p>
-        <p>Apr 2023 – May 2024</p>
-      </div>
-
-      <div class="item">
-        <h3>Mathematics Instructor</h3>
-        <p>Udvash Academic and Admission Care</p>
-        <p>Jan 2019 – May 2024</p>
-      </div>
-    </section>
-
-    <section class="section" id="awards">
-      <h2>Honors and Awards</h2>
-      <ul>
-        <li>National Science and Technology (NST) Fellowship, 2023</li>
-        <li>Sumitomo Corporation Scholarship, 2020–2024</li>
-        <li>Women’s Mathematics Olympiad: 1st (2022), 2nd (2021), 8th (2020), 6th (2019)</li>
-        <li>EWU Interuniversity Math Olympiad, 4th position, 2019</li>
-        <li>Board Scholarship - Dhaka Board, Talentpool Scholarship, 2017</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Junior Certificate, Spanish Language (A1), Institute of Modern Language, University of Dhaka</li>
-        <li>What is Data Science? — IBM, Coursera</li>
-        <li>Data Science: Foundations Using R Specialization — IBM, Coursera</li>
-        <li>Python for Everybody Specialization — IBM, Coursera</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Affiliations</h2>
-      <ul>
-        <li>Organizing Volunteer, International Day of Mathematics (Mar 2023)</li>
-        <li>Organizing Secretary (Communication and Media), Dhaka University IT Society (Jan 2021 – Jan 2023)</li>
-        <li>Membership Coordinator, Viqarunnisa Noon Debating Club (Jul 2015 – Mar 2017)</li>
-      </ul>
-    </section>
-
-    <section class="section" id="skills">
-      <h2>Skills</h2>
-      <div class="two-col">
-        <div>
-          <h3>Programming Languages and Software</h3>
-          <ul>
-            <li>MATLAB</li>
-            <li>Mathematica</li>
-            <li>Python</li>
-            <li>LaTeX</li>
-            <li>Fortran</li>
-            <li>MS Excel</li>
-          </ul>
         </div>
 
-        <div>
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Teamwork</li>
-            <li>Presentation</li>
-            <li>Project and Event Management</li>
-            <li>Leadership</li>
-          </ul>
+        <div class="interest-grid">
+
+          <div class="interest">
+            Applied Mathematics
+          </div>
+
+          <div class="interest">
+            Mathematical Biology
+          </div>
+
+          <div class="interest">
+            Data Science
+          </div>
+
+          <div class="interest">
+            Bioinformatics
+          </div>
+
         </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <h2>References</h2>
-      <div class="item">
-        <h3>Dr. Md. Kamrujjaman</h3>
-        <p>Professor, Department of Mathematics, University of Dhaka</p>
-        <p>Email: kamrujjaman@du.ac.bd</p>
-      </div>
+      </section>
 
-      <div class="item">
-        <h3>Dr. Laurent Jay</h3>
-        <p>Professor, Department of Mathematics, University of Iowa</p>
-        <p>Email: laurent-jay@uiowa.edu</p>
-      </div>
-    </section>
 
-    <section class="section" id="contact">
-      <h2>Contact</h2>
-      <p><strong>Phone:</strong> +1 925 436 6145</p>
-      <p><strong>Email:</strong> nuzhatnuarikhan-rivu@uiowa.edu</p>
-      <p><strong>Location:</strong> Iowa City, IA, USA</p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/NuzhatNuari" target="_blank">github.com/NuzhatNuari</a></p>
-    </section>
+      <!-- =====================================================
+           EDUCATION
+      ====================================================== -->
 
-  </div>
+      <section class="section" id="education">
+
+        <h2>Education</h2>
+
+
+        <div class="entry">
+
+          <div class="entry-header">
+
+            <h3>
+              PhD in Applied Mathematical and Computational Sciences
+            </h3>
+
+            <span class="date">
+              Aug. 2024 – Present
+            </span>
+
+          </div>
+
+          <p class="institution-name">
+            Department of Mathematics, University of Iowa
+          </p>
+
+          <p class="detail">
+            Iowa City, Iowa, USA
+          </p>
+
+        </div>
+
+
+        <div class="entry">
+
+          <div class="entry-header">
+
+            <h3>
+              Master of Science in Mathematics
+            </h3>
+
+            <span class="date">
+              Apr. 2023 – May 2024
+            </span>
+
+          </div>
+
+          <p class="institution-name">
+            Department of Mathematics, University of Dhaka
+          </p>
+
+          <p class="detail">
+            CGPA: 3.81 / 4.00
+          </p>
+
+        </div>
+
+
+        <div class="entry">
+
+          <div class="entry-header">
+
+            <h3>
+              Bachelor of Science in Mathematics
+            </h3>
+
+            <span class="date">
+              Jan. 2018 – Jan. 2023
+            </span>
+
+          </div>
+
+          <p class="institution-name">
+            Department of Mathematics, University of Dhaka
+          </p>
+
+          <p class="detail">
+            CGPA: 3.60 / 4.00
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           RESEARCH INTERESTS
+      ====================================================== -->
+
+      <section class="section" id="research">
+
+        <h2>Research Interests</h2>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+
+            <h3>Mathematical & Computational Research</h3>
+
+            <span class="tag">Applied Mathematics</span>
+            <span class="tag">Mathematical Modeling</span>
+            <span class="tag">Mathematical Biology</span>
+
+          </div>
+
+
+          <div class="skill-card">
+
+            <h3>Data-Driven Research</h3>
+
+            <span class="tag">Data Science</span>
+            <span class="tag">Bioinformatics</span>
+            <span class="tag">Scientific Computing</span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           PUBLICATIONS
+      ====================================================== -->
+
+      <section class="section" id="publications">
+
+        <h2>Publications</h2>
+
+        <ol class="publication-list">
+
+
+          <li>
+
+            <div class="publication-title">
+              HIV/AIDS suppression in North America:
+              Intervention plans and cost-effectiveness of UNAIDS
+              90-90-90 and 95-95-95 targets
+            </div>
+
+            <div class="publication-authors">
+              <strong>Nuzhat Nuari Khan Rivu</strong>,
+              Md Kamrujjaman, and Asif Iqbal
+            </div>
+
+            <div class="publication-journal">
+              <em>
+                Communications in Nonlinear Science and Numerical Simulation
+              </em>,
+              152, Part B, 109246, 2026.
+            </div>
+
+            <a
+              class="pub-link"
+              href="https://www.sciencedirect.com/science/article/pii/S1007570425006562?via%3Dihub"
+              target="_blank"
+              rel="noopener noreferrer">
+              View publication →
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <div class="publication-title">
+              Comparative analysis of stochastic and predictable models
+              in the HIV epidemic across genders
+            </div>
+
+            <div class="publication-authors">
+              <strong>Nuzhat Nuari Khan Rivu</strong>,
+              Md Kamrujjaman, and Shohel Ahmed
+            </div>
+
+            <div class="publication-journal">
+              <em>International Journal of Biomathematics</em>,
+              Online Ready, 2025.
+            </div>
+
+            <a
+              class="pub-link"
+              href="https://doi.org/10.1142/S1793524525501074"
+              target="_blank"
+              rel="noopener noreferrer">
+              View publication →
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <div class="publication-title">
+              Vaccine efficacy of COVID-19 in Bangladesh:
+              Does vaccination prevent the pandemic?
+            </div>
+
+            <div class="publication-authors">
+              <strong>Nuzhat Nuari Khan</strong>,
+              Shahin Ara Begum, Raheedun Afeef, and Md Kamrujjaman
+            </div>
+
+            <div class="publication-journal">
+              <em>GANIT: Journal of Bangladesh Mathematical Society</em>,
+              43(1), 45–62, 2023.
+            </div>
+
+            <a
+              class="pub-link"
+              href="https://www.researchgate.net/profile/Md-Kamrujjaman/publication/372879480_Vaccine_efficacy_of_COVID-19_in_Bangladesh_Does_vaccination_prevent_the_pandemic/links/64d2006791fb036ba6d638b9/Vaccine-efficacy-of-COVID-19-in-Bangladesh-Does-vaccination-prevent-the-pandemic.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              View publication →
+            </a>
+
+          </li>
+
+
+        </ol>
+
+      </section>
+
+
+      <!-- =====================================================
+           TEACHING EXPERIENCE
+      ====================================================== -->
+
+      <section class="section" id="teaching">
+
+        <h2>Teaching Experience</h2>
+
+        <div class="teaching-position">
+
+          <div class="entry-header">
+
+            <h3>
+              Graduate Teaching Assistant
+            </h3>
+
+            <span class="date">
+              Aug. 2024 – Present
+            </span>
+
+          </div>
+
+          <p class="institution-name">
+            Department of Mathematics, University of Iowa
+          </p>
+
+          <p class="detail">
+            Iowa City, Iowa, USA
+          </p>
+
+        </div>
+
+
+        <div class="course-list">
+
+
+          <div class="course">
+
+            <div>
+
+              <div>
+                <span class="course-code">
+                  MATH:0100
+                </span>
+
+                <span class="course-title">
+                  Basic Algebra I
+                </span>
+              </div>
+
+              <div class="course-type">
+                Standalone course
+              </div>
+
+            </div>
+
+            <span class="date">
+              Fall 2026
+            </span>
+
+          </div>
+
+
+          <div class="course">
+
+            <div>
+
+              <div>
+                <span class="course-code">
+                  MATH:1560
+                </span>
+
+                <span class="course-title">
+                  Engineering Calculus II
+                </span>
+              </div>
+
+              <div class="course-type">
+                Two discussion sections
+              </div>
+
+            </div>
+
+            <span class="date">
+              Spring 2026
+            </span>
+
+          </div>
+
+
+          <div class="course">
+
+            <div>
+
+              <div>
+                <span class="course-code">
+                  MATH:1005
+                </span>
+
+                <span class="course-title">
+                  College Algebra
+                </span>
+              </div>
+
+              <div class="course-type">
+                Standalone course
+              </div>
+
+            </div>
+
+            <span class="date">
+              Fall 2025
+            </span>
+
+          </div>
+
+
+          <div class="course">
+
+            <div>
+
+              <div>
+                <span class="course-code">
+                  MATH:1350
+                </span>
+
+                <span class="course-title">
+                  Quantitative Reasoning for Business
+                </span>
+              </div>
+
+              <div class="course-type">
+                Two discussion sections
+              </div>
+
+            </div>
+
+            <span class="date">
+              Spring 2025
+            </span>
+
+          </div>
+
+
+          <div class="course">
+
+            <div>
+
+              <div>
+                <span class="course-code">
+                  MATH:1550
+                </span>
+
+                <span class="course-title">
+                  Engineering Calculus I
+                </span>
+              </div>
+
+              <div class="course-type">
+                Two discussion sections
+              </div>
+
+            </div>
+
+            <span class="date">
+              Fall 2024
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           ACADEMIC AND PROFESSIONAL EXPERIENCE
+      ====================================================== -->
+
+      <section class="section" id="experience">
+
+        <h2>Academic & Professional Experience</h2>
+
+
+        <div class="entry">
+
+          <div class="entry-header">
+
+            <h3>
+              Graduate Research Assistant
+            </h3>
+
+            <span class="date">
+              Apr. 2023 – May 2024
+            </span>
+
+          </div>
+
+          <p class="institution-name">
+            University Grant Commission (UGC), University of Dhaka
+          </p>
+
+        </div>
+
+
+        <div class="entry">
+
+          <div class="entry-header">
+
+            <h3>
+              Mathematics Instructor
+            </h3>
+
+            <span class="date">
+              Jan. 2019 – May 2024
+            </span>
+
+          </div>
+
+          <p class="institution-name">
+            Udvash Academic and Admission Care
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           HONORS AND AWARDS
+      ====================================================== -->
+
+      <section class="section" id="awards">
+
+        <h2>Honors & Awards</h2>
+
+
+        <div class="award">
+
+          <div>
+
+            <div class="award-name">
+              National Science and Technology (NST) Fellowship
+            </div>
+
+            <div class="award-description">
+              Awarded for M.S. thesis research in the Physical Science group.
+            </div>
+
+          </div>
+
+          <span class="date">
+            2023
+          </span>
+
+        </div>
+
+
+        <div class="award">
+
+          <div>
+
+            <div class="award-name">
+              Sumitomo Corporation Scholarship
+            </div>
+
+            <div class="award-description">
+              Awarded based on academic achievement and merit.
+            </div>
+
+          </div>
+
+          <span class="date">
+            2020 – 2024
+          </span>
+
+        </div>
+
+
+        <div class="award">
+
+          <div>
+
+            <div class="award-name">
+              Women's Mathematics Olympiad
+            </div>
+
+            <div class="award-description">
+              1st Place (2022) · 2nd Place (2021) ·
+              8th Place (2020) · 6th Place (2019)
+            </div>
+
+          </div>
+
+          <span class="date">
+            2019 – 2022
+          </span>
+
+        </div>
+
+
+        <div class="award">
+
+          <div>
+
+            <div class="award-name">
+              EWU Interuniversity Mathematics Olympiad
+            </div>
+
+            <div class="award-description">
+              4th Place
+            </div>
+
+          </div>
+
+          <span class="date">
+            2019
+          </span>
+
+        </div>
+
+
+        <div class="award">
+
+          <div>
+
+            <div class="award-name">
+              Dhaka Board Scholarship
+            </div>
+
+            <div class="award-description">
+              Talent Pool Scholarship; Merit Position: 60th in Dhaka Board.
+            </div>
+
+          </div>
+
+          <span class="date">
+            2017
+          </span>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           LEADERSHIP AND SERVICE
+      ====================================================== -->
+
+      <section class="section" id="service">
+
+        <h2>Leadership & Service</h2>
+
+
+        <div class="entry">
+
+          <div class="entry-header">
+
+            <h3>
+              Organizing Volunteer
+            </h3>
+
+            <span class="date">
+              Mar. 2023
+            </span>
+
+          </div>
+
+          <p class="institution-name">
+            International Day of Mathematics
+          </p>
+
+        </div>
+
+
+        <div class="entry">
+
+          <div class="entry-header">
+
+            <h3>
+              Organizing Secretary, Communication and Media
+            </h3>
+
+            <span class="date">
+              Jan. 2021 – Jan. 2023
+            </span>
+
+          </div>
+
+          <p class="institution-name">
+            Dhaka University IT Society (DUITS)
+          </p>
+
+        </div>
+
+
+        <div class="entry">
+
+          <div class="entry-header">
+
+            <h3>
+              Membership Coordinator
+            </h3>
+
+            <span class="date">
+              Jul. 2015 – Mar. 2017
+            </span>
+
+          </div>
+
+          <p class="institution-name">
+            Viqarunnisa Noon Debating Club
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           TECHNICAL SKILLS
+      ====================================================== -->
+
+      <section class="section" id="skills">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills-grid">
+
+
+          <div class="skill-card">
+
+            <h3>Programming & Scientific Computing</h3>
+
+            <span class="tag">MATLAB</span>
+            <span class="tag">Python</span>
+            <span class="tag">Fortran</span>
+            <span class="tag">Mathematica</span>
+
+          </div>
+
+
+          <div class="skill-card">
+
+            <h3>Research & Data Tools</h3>
+
+            <span class="tag">LaTeX</span>
+            <span class="tag">Microsoft Excel</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Scientific Writing</span>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           CERTIFICATIONS
+      ====================================================== -->
+
+      <section class="section">
+
+        <h2>Certifications</h2>
+
+        <ul class="compact-list">
+
+          <li>
+            <strong>Junior Certificate in Spanish Language (A1)</strong>
+            — Institute of Modern Languages, University of Dhaka
+          </li>
+
+          <li>
+            <strong>What is Data Science?</strong>
+            — IBM, Coursera
+          </li>
+
+          <li>
+            <strong>Data Science: Foundations Using R Specialization</strong>
+            — Coursera
+          </li>
+
+          <li>
+            <strong>Python for Everybody Specialization</strong>
+            — Coursera
+          </li>
+
+        </ul>
+
+      </section>
+
+
+      <!-- =====================================================
+           REFERENCES
+      ====================================================== -->
+
+      <section class="section">
+
+        <h2>References</h2>
+
+        <div class="reference-grid">
+
+
+          <div class="reference-card">
+
+            <h3>Dr. Colleen Mitchell</h3>
+
+            <p>
+              Associate Professor
+            </p>
+
+            <p>
+              Department of Mathematics
+            </p>
+
+            <p>
+              University of Iowa
+            </p>
+
+            <p>
+              <a href="mailto:colleen-mitchell@uiowa.edu">
+                colleen-mitchell@uiowa.edu
+              </a>
+            </p>
+
+          </div>
+
+
+          <div class="reference-card">
+
+            <h3>Dr. Laurent Jay</h3>
+
+            <p>
+              Professor
+            </p>
+
+            <p>
+              Department of Mathematics
+            </p>
+
+            <p>
+              University of Iowa
+            </p>
+
+            <p>
+              <a href="mailto:laurent-jay@uiowa.edu">
+                laurent-jay@uiowa.edu
+              </a>
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           CONTACT
+      ====================================================== -->
+
+      <section class="section" id="contact">
+
+        <h2>Contact</h2>
+
+        <p class="section-intro">
+          For academic, research, or teaching-related inquiries,
+          please feel free to contact me.
+        </p>
+
+        <div class="contact-grid">
+
+
+          <div class="contact-card">
+
+            <strong>Email</strong>
+
+            <a href="mailto:nuzhatnuarikhan-rivu@uiowa.edu">
+              nuzhatnuarikhan-rivu@uiowa.edu
+            </a>
+
+          </div>
+
+
+          <div class="contact-card">
+
+            <strong>Location</strong>
+
+            Iowa City, Iowa, USA
+
+          </div>
+
+
+          <div class="contact-card">
+
+            <strong>Phone</strong>
+
+            +1 925 436 6145
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
 
   <footer>
-    <p>&copy; 2026 Nuzhat Nuari Khan Rivu. All rights reserved.</p>
+
+    <p>
+      &copy; 2026 Nuzhat Nuari Khan Rivu · University of Iowa
+    </p>
+
   </footer>
 
+
 </body>
+
 </html>
